@@ -15,7 +15,20 @@ form {
 		color: lighten(black, 40%);
 	}
 
-	input {
+	textarea {
+		text-align: left;
+		font-size: .8em !important;
+		max-width: 100%;
+	}
+
+	textarea:focus {
+		border: 0;
+		background: lighten(whitesmoke, 2%);
+		outline: none;
+		transition: all 0.1s ease-in;
+	}
+
+	input, textarea {
 		display: block;
 		border: 0;
 		border-bottom: 1px dotted darken(whitesmoke, 10%);
@@ -92,6 +105,13 @@ form {
 		background: lightseagreen;
 		color: white;
 		padding: 8px 0;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+
+		&:hover {
+			background: darken(lightseagreen, 5%);
+			transition: all 0.2s ease-in;
+		}
 	}
 
 	label, span {

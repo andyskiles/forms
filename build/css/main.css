@@ -38,6 +38,7 @@ html {
 
 body {
   background: white;
+  color: #666666;
   font-family: 'AvenirNext LT Pro Regular', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -97,9 +98,8 @@ pre {
 }
 
 ul {
-  list-style: none;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 1em 1em;
 }
 
 li {
@@ -109,6 +109,7 @@ li {
 
 a {
   text-decoration: none;
+  color: lightseagreen;
 }
 
 /*
@@ -121,35 +122,35 @@ Layout-Header
 Layout-Page
 ========================
 */
-form {
+form, main {
   max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
 }
-form:after {
+form:after, main:after {
   content: " ";
   display: block;
   clear: both;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  form {
+  form, main {
     max-width: 75vw;
     margin-left: auto;
     margin-right: auto;
   }
-  form:after {
+  form:after, main:after {
     content: " ";
     display: block;
     clear: both;
   }
 }
 @media (min-width: 64.063em) {
-  form {
+  form, main {
     max-width: 60vw;
     margin-left: auto;
     margin-right: auto;
   }
-  form:after {
+  form:after, main:after {
     content: " ";
     display: block;
     clear: both;
@@ -176,12 +177,23 @@ Partials-Header
   padding-left: 10px;
   float: left;
 }
+.site-header .logo {
+  float: right;
+  padding-right: 10px;
+}
+.site-header svg {
+  fill: white;
+}
 
 /*
 ========================
 Partials-Page
 ========================
 */
+main {
+  margin-top: 1em;
+}
+
 /*
 ========================
 Partials-Footer
@@ -212,7 +224,18 @@ form {
 form h3 {
   color: #666666;
 }
-form input {
+form textarea {
+  text-align: left;
+  font-size: .8em !important;
+  max-width: 100%;
+}
+form textarea:focus {
+  border: 0;
+  background: #fafafa;
+  outline: none;
+  transition: all 0.1s ease-in;
+}
+form input, form textarea {
   display: block;
   border: 0;
   border-bottom: 1px dotted gainsboro;
@@ -222,7 +245,7 @@ form input {
   font-size: 1.4em;
   font-family: inherit;
 }
-form input:first-of-type {
+form input:first-of-type, form textarea:first-of-type {
   margin-top: 1.5em;
 }
 form input:focus {
@@ -272,6 +295,12 @@ form input[type=submit] {
   background: lightseagreen;
   color: white;
   padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+form input[type=submit]:hover {
+  background: #1c9c95;
+  transition: all 0.2s ease-in;
 }
 form label, form span {
   display: block;
