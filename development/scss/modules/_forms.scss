@@ -1,0 +1,102 @@
+/*
+========================
+Modules-Forms
+========================
+*/
+
+form {
+	font-size: inherit;
+	font-family: inherit;
+	margin-top: 2em;
+	margin-bottom: 2em;
+
+	h3 {
+		color: lighten(black, 40%);
+	}
+
+	input {
+		display: block;
+		border: 0;
+		border-bottom: 1px dotted darken(whitesmoke, 10%);
+		font-size: 1em;
+		transition: all 0.1s ease-out;
+		width: 100%;
+		font-size: 1.4em;
+		font-family: inherit;
+
+		&:first-of-type {
+			margin-top: 1.5em;
+		}
+	}
+
+	input:focus {
+		border: 0;
+		background: lighten(whitesmoke, 2%);
+		outline: none;
+		transition: all 0.1s ease-in;
+	}
+
+	input[type=color] {
+		height: 100px;
+		width: 100px;
+		background-color: red;
+		border: 0;
+	}
+
+	input[type=number] {}
+
+	input[type=radio] {}
+
+	input[type=tel] {}
+
+	input[type=text] {}
+
+	input[type=url] {}
+	
+	input[type=checkbox], input[type=radio] {
+		float: left;
+		display: inline;
+		width: 10px;
+		height: 10px;
+		margin-top: .6em;
+		margin-right: .8em;
+		box-shadow: 0 0 1px #ccc;
+		border-radius: 3px;
+		cursor: pointer;
+		transform: scale(2);
+
+		+ span {
+			margin-bottom: 0;
+		}
+	}
+
+	.checkboxes, .radios {
+		margin: 1em 0;
+	}
+
+	input[type=radio] {
+		transform: 0;
+		border-radius: 0;
+		box-shadow: 0;
+	}
+
+	input[type=submit] {
+		margin-top: 1.5em;
+		background: green;
+		color: white;
+		padding: 8px 0;
+	}
+
+	label, span {
+		display: block;
+		overflow: hidden;
+		margin-bottom: 1em;
+		padding-top: .5em;
+		font-size: 1em;
+		color: lighten(black, 40%);
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

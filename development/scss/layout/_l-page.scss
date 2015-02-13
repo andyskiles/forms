@@ -3,3 +3,7 @@
 Layout-Page
 ========================
 */
+
+form {
+	@include container(90vw);
+}
