@@ -6,4 +6,12 @@ Layout-Page
 
 form {
 	@include container(90vw);
+
+	@include bp(m) {
+		@include container(75vw);
+	}
+
+	@include bp(l) {
+		@include container(60vw);
+	}
 }

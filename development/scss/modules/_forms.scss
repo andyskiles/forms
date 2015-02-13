@@ -9,6 +9,7 @@ form {
 	font-family: inherit;
 	margin-top: 2em;
 	margin-bottom: 2em;
+	color: lighten(black, 40%);
 
 	h3 {
 		color: lighten(black, 40%);
@@ -71,7 +72,13 @@ form {
 	}
 
 	.checkboxes, .radios {
-		margin: 1em 0;
+		margin: 2em 0;
+
+		small {
+			margin-top: 1em;
+			display: block;
+			color: lighten(black, 40%);
+		}
 	}
 
 	input[type=radio] {
@@ -82,7 +89,7 @@ form {
 
 	input[type=submit] {
 		margin-top: 1.5em;
-		background: green;
+		background: lightseagreen;
 		color: white;
 		padding: 8px 0;
 	}
@@ -90,7 +97,7 @@ form {
 	label, span {
 		display: block;
 		overflow: hidden;
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 		padding-top: .5em;
 		font-size: 1em;
 		color: lighten(black, 40%);

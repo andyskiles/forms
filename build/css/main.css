@@ -131,6 +131,30 @@ form:after {
   display: block;
   clear: both;
 }
+@media (min-width: 40.063em) and (max-width: 64em) {
+  form {
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 64.063em) {
+  form {
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
 
 /*
 ========================
@@ -142,6 +166,17 @@ Layout-Footer
 Partials-Header
 ========================
 */
+.site-header {
+  background: lightseagreen;
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.site-header h2 {
+  padding-left: 10px;
+  float: left;
+}
+
 /*
 ========================
 Partials-Page
@@ -152,6 +187,16 @@ Partials-Page
 Partials-Footer
 ========================
 */
+.site-footer {
+  background: lightseagreen;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  margin-top: 80px;
+  overflow: hidden;
+  display: block;
+}
+
 /*
 ========================
 Modules-Forms
@@ -162,6 +207,7 @@ form {
   font-family: inherit;
   margin-top: 2em;
   margin-bottom: 2em;
+  color: #666666;
 }
 form h3 {
   color: #666666;
@@ -208,7 +254,12 @@ form input[type=checkbox] + span, form input[type=radio] + span {
   margin-bottom: 0;
 }
 form .checkboxes, form .radios {
-  margin: 1em 0;
+  margin: 2em 0;
+}
+form .checkboxes small, form .radios small {
+  margin-top: 1em;
+  display: block;
+  color: #666666;
 }
 form input[type=radio] {
   -webkit-transform: 0;
@@ -218,14 +269,14 @@ form input[type=radio] {
 }
 form input[type=submit] {
   margin-top: 1.5em;
-  background: green;
+  background: lightseagreen;
   color: white;
   padding: 8px 0;
 }
 form label, form span {
   display: block;
   overflow: hidden;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   padding-top: .5em;
   font-size: 1em;
   color: #666666;
